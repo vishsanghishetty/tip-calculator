@@ -25,9 +25,14 @@ export default function TipCalculator() {
           </SelectPercentage>
           <SelectPercentage percentage={percentage2} onSelectPercentage={setSelectPercentage2}> 
               How did your friend like the service? 💁‍♀️
-          </SelectPercentage>
+      </SelectPercentage>    
+      {
+        billInput > 0 &&
+        (<>
       <Output billInput={billInput} totalTip={totalTip} />
-      <Reset onHandleReset={handleReset}/>
+          <Reset onHandleReset={handleReset} />
+          </>
+      )}
     </div>
   )
 }
